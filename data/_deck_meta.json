@@ -1,0 +1,27 @@
+{
+  "K": 6,
+  "sil_km": 0.13877055161033225,
+  "sil_ag": 0.09561145122922401,
+  "ari_methods": 0.5513618401851088,
+  "n_videos": 9100,
+  "n_features": 26,
+  "n_pca": 16,
+  "cluster_names": {
+    "4": "Flash",
+    "0": "Firework",
+    "1": "Standard",
+    "3": "Beloved",
+    "2": "Marathon",
+    "5": "Drumbeat"
+  },
+  "cluster_sizes": {
+    "0": 1598,
+    "1": 1446,
+    "2": 1119,
+    "3": 1132,
+    "4": 3693,
+    "5": 112
+  },
+  "snapshots_total": 37352,
+  "unique_videos_total": 16307
+}

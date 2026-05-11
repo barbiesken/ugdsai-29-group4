@@ -1,0 +1,24 @@
+Archival data load summary
+==========================
+
+Source: data/archival/INvideos.csv
+Schema detected: A
+Output: data/master_snapshots_archival.csv
+
+Rows: 37,352
+Unique videos: 16,307
+Unique snapshots: 205
+Date range: 2017-11-14T16:30:00+00:00 → 2018-06-14T16:30:00+00:00
+
+Top categories by row count:
+category_id
+24    16712
+25     5241
+10     3858
+23     3429
+22     2624
+1      1658
+27     1227
+26      845
+17      731
+28      552

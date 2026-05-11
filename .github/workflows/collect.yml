@@ -1,0 +1,45 @@
+name: collect-trending
+
+# Twice daily: 10:00 IST = 04:30 UTC, 22:00 IST = 16:30 UTC
+# GitHub cron uses UTC.
+on:
+  schedule:
+    - cron: "30 4 * * *"
+    - cron: "30 16 * * *"
+  workflow_dispatch:        # also allow manual triggering for testing
+
+permissions:
+  contents: write           # so the action can commit results back
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run collector
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: |
+          python scripts/collect.py
+
+      - name: Commit & push results
+        run: |
+          git config user.name  "ugdsai-collector-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "snapshot: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

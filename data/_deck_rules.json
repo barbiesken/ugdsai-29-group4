@@ -1,0 +1,42 @@
+[
+  {
+    "topic": "Telugu comedy (Jabardasth)",
+    "antecedent": "jabardasth, venu wonders",
+    "consequent": "roller raghu",
+    "support": 0.010101010101010102,
+    "confidence": 1.0,
+    "lift": 98.99999999999999
+  },
+  {
+    "topic": "Punjabi music",
+    "antecedent": "punjabi music, punjabi songs",
+    "consequent": "punjabi latest songs",
+    "support": 0.010101010101010102,
+    "confidence": 0.6966292134831461,
+    "lift": 51.51698930553676
+  },
+  {
+    "topic": "Hindi film music",
+    "antecedent": "zee tv",
+    "consequent": "full episode, hindi",
+    "support": 0.010263929618768328,
+    "confidence": 0.6428571428571429,
+    "lift": 41.535338345864666
+  },
+  {
+    "topic": "News & politics",
+    "antecedent": "tv9 ap",
+    "consequent": "tv9 news, tv9 online",
+    "support": 0.010915607689801238,
+    "confidence": 0.9852941176470589,
+    "lift": 90.26470588235296
+  },
+  {
+    "topic": "Religious / devotional",
+    "antecedent": "balanchandran",
+    "consequent": "programme, uppum mulakum",
+    "support": 0.012056044314108831,
+    "confidence": 1.0,
+    "lift": 82.94594594594594
+  }
+]
